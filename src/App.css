@@ -11,3 +11,21 @@
 .group {
   padding: 0.5rem;
 }
+
+.product-section {
+  padding: 0.25rem;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.product {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  min-width: 20vw;
+  border: 2px solid;
+  border-color: darkblue;
+}

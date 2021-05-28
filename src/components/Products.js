@@ -32,19 +32,21 @@ const productsDB = [
 const Products = () => {
   const { currency } = useCurrency();
   return (
-    <div>
+    <div className="product-section">
       <h2>Products</h2>
-      {productsDB.map((product) => {
-        const { id, title, price } = product;
-        return (
-          <div key={id + Math.random()}>
-            <h3>{title}</h3>
-            <h4>
-              {currency.symbol} {(price * currency.multiplier).toFixed(2)}
-            </h4>
-          </div>
-        );
-      })}
+      <div className="product-list">
+        {productsDB.map((product) => {
+          const { id, title, price } = product;
+          return (
+            <div key={id + Math.random()} className="product">
+              <h3>{title}</h3>
+              <h4>
+                {currency.symbol} {(price * currency.multiplier).toFixed(2)}
+              </h4>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
